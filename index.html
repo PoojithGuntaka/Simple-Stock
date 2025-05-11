@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard - Simple Stock</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-tr from-blue-100 to-blue-200 min-h-screen">
+  <!-- Navigation Bar -->
+  <nav class="bg-blue-700 text-white p-4 flex justify-between items-center shadow-lg rounded-b-3xl">
+    <div class="text-2xl font-bold">Simple Stock</div>
+    <div class="space-x-4">
+      <a href="index.html" class="hover:underline">Dashboard</a>
+      <a href="login.html" class="hover:underline">Logout</a>
+    </div>
+  </nav>
+
+  <!-- Dashboard Grid -->
+  <div class="p-8">
+    <h1 class="text-3xl font-semibold text-center text-blue-800 mb-10">Welcome to the Simple Stock Dashboard</h1>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      <!-- Card -->
+      <a href="view-orders.html" class="bg-white rounded-2xl shadow-xl p-6 hover:scale-105 transform transition-all cursor-pointer">
+        <i class="ph ph-list text-4xl text-blue-600 mb-2"></i>
+        <h2 class="text-xl font-semibold">View Orders</h2>
+      </a>
+      <a href="create-orders.html" class="bg-white rounded-2xl shadow-xl p-6 hover:scale-105 transform transition-all cursor-pointer">
+        <i class="ph ph-plus-circle text-4xl text-green-600 mb-2"></i>
+        <h2 class="text-xl font-semibold">Create Orders</h2>
+      </a>
+      <a href="view-customers.html" class="bg-white rounded-2xl shadow-xl p-6 hover:scale-105 transform transition-all cursor-pointer">
+        <i class="ph ph-users text-4xl text-purple-600 mb-2"></i>
+        <h2 class="text-xl font-semibold">View Customers</h2>
+      </a>
+      <a href="add-customer.html" class="bg-white rounded-2xl shadow-xl p-6 hover:scale-105 transform transition-all cursor-pointer">
+        <i class="ph ph-user-plus text-4xl text-pink-600 mb-2"></i>
+        <h2 class="text-xl font-semibold">Add Customer</h2>
+      </a>
+      <a href="view-supplier.html" class="bg-white rounded-2xl shadow-xl p-6 hover:scale-105 transform transition-all cursor-pointer">
+        <i class="ph ph-truck text-4xl text-yellow-600 mb-2"></i>
+        <h2 class="text-xl font-semibold">View Suppliers</h2>
+      </a>
+      <a href="add-supplier.html" class="bg-white rounded-2xl shadow-xl p-6 hover:scale-105 transform transition-all cursor-pointer">
+        <i class="ph ph-truck-plus text-4xl text-indigo-600 mb-2"></i>
+        <h2 class="text-xl font-semibold">Add Supplier</h2>
+      </a>
+      <a href="add-product.html" class="bg-white rounded-2xl shadow-xl p-6 hover:scale-105 transform transition-all cursor-pointer">
+        <i class="ph ph-package text-4xl text-red-600 mb-2"></i>
+        <h2 class="text-xl font-semibold">Add Product</h2>
+      </a>
+      <a href="export-product.html" class="bg-white rounded-2xl shadow-xl p-6 hover:scale-105 transform transition-all cursor-pointer">
+        <i class="ph ph-arrow-circle-up text-4xl text-teal-600 mb-2"></i>
+        <h2 class="text-xl font-semibold">Export Product</h2>
+      </a>
+      <a href="import-product.html" class="bg-white rounded-2xl shadow-xl p-6 hover:scale-105 transform transition-all cursor-pointer">
+        <i class="ph ph-arrow-circle-down text-4xl text-amber-600 mb-2"></i>
+        <h2 class="text-xl font-semibold">Import Product</h2>
+      </a>
+    </div>
+  </div>
+</body>
+</html>
+

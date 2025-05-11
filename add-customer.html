@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Add Customer - Simple Stock</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans min-h-screen">
+
+  <header class="bg-green-600 text-white p-4 shadow-md">
+    <div class="flex justify-between items-center">
+      <h1 class="text-2xl font-bold">📦 Simple Stock</h1>
+      <div class="text-lg font-semibold">Add Customer</div>
+    </div>
+  </header>
+  <main class="p-6">
+    <div class="mb-4">
+      <a href="index.html" class="bg-green-500 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded">
+        ← Back to Dashboard
+      </a>
+    </div>
+  <main class="p-6">
+    <div class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-lg">
+      <h2 class="text-2xl font-semibold text-center mb-6">Add a New Customer</h2>
+      <form action="" method="POST">
+        <div class="mb-4">
+          <label for="customer-name" class="block text-lg font-medium">Customer Name</label>
+          <input type="text" id="customer-name" name="customer-name" class="w-full p-3 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600" placeholder="Enter customer's full name" required />
+        </div>
+
+        <div class="mb-4">
+          <label for="customer-email" class="block text-lg font-medium">Email Address</label>
+          <input type="email" id="customer-email" name="customer-email" class="w-full p-3 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600" placeholder="Enter customer's email" required />
+        </div>
+
+        <div class="mb-4">
+          <label for="customer-phone" class="block text-lg font-medium">Phone Number</label>
+          <input type="text" id="customer-phone" name="customer-phone" class="w-full p-3 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600" placeholder="Enter customer's phone number" required />
+        </div>
+
+        <div class="mb-4">
+          <label for="customer-address" class="block text-lg font-medium">Address</label>
+          <textarea id="customer-address" name="customer-address" class="w-full p-3 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600" rows="4" placeholder="Enter customer's address" required></textarea>
+        </div>
+
+        <div class="text-center">
+          <button type="submit" class="bg-green-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-green-800">Add Customer</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Create Order - Simple Stock</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans min-h-screen">
+  <header class="bg-green-600 text-white p-4 shadow-md">
+    <h1 class="text-2xl font-bold">➕ Create New Order</h1>
+  </header>
+
+  <main class="p-6">
+    <div class="mb-4">
+      <a href="index.html" class="bg-green-500 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded">
+        ← Back to Dashboard
+      </a>
+    </div>
+
+    <div class="bg-white p-6 rounded-lg shadow-lg max-w-xl mx-auto">
+      <form id="orderForm">
+        <div class="mb-4">
+          <label class="block text-gray-700 font-semibold mb-2">Select Customer</label>
+          <select id="customer" class="w-full p-3 border rounded-lg" required>
+            <option value="">-- Choose Customer --</option>
+            <option>John Doe</option>
+            <option>Jane Smith</option>
+            <option>Akash Reddy</option>
+          </select>
+        </div>
+
+        <div class="mb-4">
+          <label class="block text-gray-700 font-semibold mb-2">Select Product</label>
+          <select id="product" class="w-full p-3 border rounded-lg" required>
+            <option value="">-- Choose Product --</option>
+            <option>LED Monitor</option>
+            <option>Wireless Mouse</option>
+            <option>Keyboard</option>
+          </select>
+        </div>
+
+        <div class="mb-4">
+          <label class="block text-gray-700 font-semibold mb-2">Quantity</label>
+          <input type="number" id="quantity" placeholder="Enter quantity" class="w-full p-3 border rounded-lg" required />
+        </div>
+
+        <button type="submit" class="bg-green-600 hover:bg-green-800 text-white font-bold py-3 px-6 rounded-lg w-full">
+          ✅ Place Order
+        </button>
+      </form>
+    </div>
+  </main>
+
+  <footer class="bg-green-600 text-white text-center p-3 mt-8">
+    &copy; 2025 Simple Stock System
+  </footer>
+
+  <script>
+    const form = document.getElementById('orderForm');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const customer = document.getElementById('customer').value;
+      const product = document.getElementById('product').value;
+      const quantity = document.getElementById('quantity').value;
+
+      if (customer && product && quantity) {
+        const newOrder = { customer, product, quantity };
+
+        // Get existing orders from LocalStorage
+        let orders = JSON.parse(localStorage.getItem('orders')) || [];
+
+        // Add new order
+        orders.push(newOrder);
+
+        // Save back to LocalStorage
+        localStorage.setItem('orders', JSON.stringify(orders));
+
+        alert("Order placed successfully!");
+        window.location.href = "view-orders.html"; // Redirect to view orders
+      }
+    });
+  </script>
+</body>
+</html>
+
+
